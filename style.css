@@ -17,17 +17,11 @@
 }
 
 /* 📌 수정된 coin-display 스타일 (재화 표기) */
+/* 💰 보유 재화 표시 (깔끔한 텍스트형으로 변경) */
 .coin-display {
-  font-size: 20px;           /* 기존보다 20% 축소 */
+  font-size: 20px;
   font-weight: bold;
-  padding: 8px 14px;
-  background-color: #f5f5f5;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  max-width: 220px;          /* 더 좁게 */
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-left: auto;
+  margin-right: 16px; /* 우측 여백 확보 */
   white-space: nowrap;
-  margin-left: auto;         /* 오른쪽으로 밀기 */
-  margin-right: 10px;        /* 오른쪽 여백 확보해서 짤림 방지 */
 }
