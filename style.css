@@ -1,9 +1,10 @@
 body {
   font-family: 'Pretendard', sans-serif;
   margin: 0;
-  padding-top: 70px; /* 헤더 공간 확보 */
+  padding-top: 80px; /* 헤더 높이만큼 여백 확보 */
 }
 
+/* 🎯 상단 고정 헤더 */
 .header {
   position: fixed;
   top: 0;
@@ -12,23 +13,45 @@ body {
   border-bottom: 2px solid #eee;
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
+  align-items: center;
+  padding: 14px 24px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   z-index: 1000;
 }
 
+/* 🏪 상점 / 홈 버튼 (확대 + 테두리 추가) */
 .nav-btn {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 27px;        /* 1.5배 확대 */
   text-decoration: none;
   color: #222;
+  padding: 10px 18px;
+  border: 2px solid #aaa; /* 테두리 추가 */
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  transition: all 0.2s ease;
 }
 
+.nav-btn:hover {
+  background-color: #eee;
+  transform: scale(1.05);
+}
+
+/* 💰 보유 재화 표시 영역 (확대 + 위치 개선) */
 .coin-display {
-  font-size: 16px;
+  font-size: 24px;           /* 1.5배 확대 */
   font-weight: bold;
+  padding: 10px 16px;
+  background-color: #f5f5f5;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  max-width: 280px;          /* 잘림 방지 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
+/* 📦 메인 콘텐츠 / 상점 콘텐츠 공통 */
 .container, .shop-container {
   padding: 40px;
   text-align: center;
