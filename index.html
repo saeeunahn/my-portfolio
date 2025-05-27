@@ -2,10 +2,69 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>안세은 포트폴리오</title>
+  <title>세니 공주님의 포트폴리오 상점</title>
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .coin-display {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #f8f8f8;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      z-index: 999;
+    }
+    .container {
+      text-align: center;
+      margin-top: 150px;
+    }
+    .btn {
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ffe66d;
+      cursor: pointer;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+      transition: all 0.2s ease;
+    }
+    .btn:hover {
+      background-color: #ffdd33;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-  <h1>안녕하세요! 안세은입니다👑✨</h1>
-  <p>여기는 공부꽁 월드🏰의 상점입니다.</p>
+
+  <!-- 💰 보유 재화 표시 영역 -->
+  <div class="coin-display">
+    💰 보유 재화: <span id="coin-count">0</span>개
+  </div>
+
+  <div class="container">
+    <h1>안녕하세요! 세니 공주입니다👑✨</h1>
+    <p>아래 버튼을 누르면 재화를 얻을 수 있어요!</p>
+    
+    <!-- 🎁 버튼: 클릭 시 재화 증가 -->
+    <button class="btn" onclick="gainCoins()">터치 시 재화 50개 지급</button>
+  </div>
+
+  <script>
+    let coin = 0;
+
+    function gainCoins() {
+      coin += 50;
+      document.getElementById("coin-count").innerText = coin;
+    }
+  </script>
+
 </body>
 </html>
+
